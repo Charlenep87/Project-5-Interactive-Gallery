@@ -7,11 +7,15 @@
 body {
     font-family: Tahoma;
     font-size: 20px;
-   
+    display: grid;
    
 }
 
+.search {
+    display: grid;
+}
 .search-area {
+
     display: flex;
     justify-content: center;
 }
