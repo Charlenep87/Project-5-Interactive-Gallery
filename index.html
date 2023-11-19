@@ -15,9 +15,9 @@
     <div class="search-area">
         <label for="search"><input id="search" name="search" placeholder="search (16pt)" type="text" maxlength="16"></label>
     </div>
-    <div class="grid">
+    <div class="gallery-container gallery" id="photos">
         <ul>
-            <li><a href="photos/01.jpg" data-lightbox="photo" data-title="I love hay bales. Took this snap on a drive through the countryside past some straw fields." data-alt="Hay Bales"><img src="photos/thumbnails/01.jpg" alt=""/></a></li>
+            <li><a href="photos/01.jpg" data-lightbox="photo" data-title="I love hay bales. Took this snap on a drive through the countryside past some straw fields." data-alt="Hay Bales"><img src="photos/thumbnails/01.jpg" alt="" /></a></li>
             <li><a href="photos/02.jpg" data-lightbox="photo" data-title="The lake was so calm today. We had a great view of the snow on the mountains from here." data-alt="lake"><img src="photos/thumbnails/02.jpg" alt=""/></a></li>
             <li><a href="photos/03.jpg" data-lightbox="photo" data-title="I hiked to the top of the mountain and got this picture of the canyon and trees below." data-alt="Canyon"><img src="photos/thumbnails/03.jpg" alt=""/></a></li>
             <li><a href="photos/04.jpg" data-lightbox="photo" data-title="It was amazing to see an iceberg up close, it was so cold but didn’t snow today." data-alt="Icebergs"><img src="photos/thumbnails/04.jpg" alt=""/></a></li>
@@ -33,12 +33,31 @@
     </div>
 </div>
 
-
+ <script>
+    window.addEventListener('load', function () {
+      baguetteBox.run(".gallery", {
+        captions: true,
+        buttons: 'auto',
+        fullScreen: false,
+        noScrollbars: false,
+        titleTag: true,
+        async: false,
+        preload: 2,
+        animation: 'fadeIn',
+        onChange: null
+      });
+    });
+  </script>
+  <script src="js/baguetteBox.min.js" async></script>
+  
+  <script src="js/app.js"></script>
 <script src="js/jquery-3.5.0.min.js"></script>
-<script src="js/lightbox.js"></script>
-<script src="js/app.js"></script>
-<script src="js/lightbox.min.js"></script>
-<script src="js/baguetteBox.min.js"></script>
+   <script>
+        lightbox.option({
+            'alwaysShowNavOnTouchDevices': true,
+            'showImageNumberLabel': false
+        })
+      </script>
 
 </body>
 
